@@ -1,0 +1,189 @@
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.Splash{
+    width: 100%;
+    height: 100vh;
+    background-color: #2F3267;
+    position: relative;
+}
+
+.title>h1{
+    font-size: 80px;
+    position: absolute;
+    color: white;
+    font-weight: 700;
+    font-family: 'Cafe24Ssurround';
+}
+
+.title-1 {
+    top: 70px; /* 상대적 위치 조정 */
+    left: 105px; /* 백분율로 변경 */
+}
+
+.title-2 {
+    top: 100px; /* 상대적 위치 조정 */
+    left: 255px; /* 백분율로 변경 */
+}
+
+.star {
+    position: absolute;
+    top: 10%; /* 백분율로 변경 */
+    left: 49%; /* 백분율로 변경 */
+}
+
+
+.star img{
+    width: 80px;
+    height: 80px;
+}
+
+.camping-scene {
+    position: relative; 
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* 아래에서 시작 */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* 최종 위치로 이동 */
+    }
+}
+
+.tent {
+    position: absolute;
+    top: 300px;
+    left: 17%;
+    transform: translateX(-50%);
+    animation: fadeInUp 1s ease-out forwards; /* 1초 동안 실행 */
+}
+
+.tent img {
+    width: 350px;
+}
+
+
+@keyframes bounce {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px); /* 위에서 시작 */
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0); /* 최종 위치에 도달 */
+    }
+    70% {
+        transform: translateY(-10px); /* 바운스 */
+    }
+    100% {
+        transform: translateY(0); /* 최종 위치로 정착 */
+    }
+}
+
+.Splash * {
+    transition: all 0.5s ease; /* 모든 자식 요소에 부드러운 전환 적용 */
+}
+
+.star img {
+    animation: bounce 1s ease forwards; /* 애니메이션 적용, 1초 동안 실행 */
+}
+
+/* 나머지 스타일은 이전에 제공한 코드와 동일 */
+
+
+
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-20%); /* 왼쪽에서 시작 */
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(20%); /* 오른쪽에서 시작 */
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.title-1 {
+    animation: slideInFromLeft 0.8s ease-out forwards; /* 0.8초 동안 실행 */
+}
+
+.title-2 {
+    animation: slideInFromRight 0.8s ease-out forwards; /* 0.8초 동안 실행 */
+}
+
+
+.shadow-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 20px; /* 내부 여백 */
+    width: 100%; /* 전체 너비 */
+    margin: auto; /* 가운데 정렬 */
+    position: absolute;
+    top: 422px;
+    
+}
+
+.shadow {
+    height: 20px; /* 막대 높이 */
+    background-color: #65689C89; /* 막대 색상 */
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.4); /* 그림자 효과 */
+    border-radius: 10px; /* 둥근 모서리 */
+    position: absolute;
+}
+
+/* 각 막대에 다른 길이와 left 값 적용 */
+.shadow1 { width: 80%; left: 20px; top: 20px}
+.shadow2 { width: 80%; left: 80px; top: 40px}
+.shadow3 { width: 70%; left: 60px; top: 60px}
+.shadow4 { width: 50%; left: 180px; top: 80px}
+.shadow5 { width: 70%; left: 120px; top: 100px}
+.shadow6 { width: 90%; left: 40px; top: 120px}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.shadow1, .shadow3, .shadow5 {
+    animation: slideInFromLeft 0.8s ease-out forwards;
+}
+
+.shadow2, .shadow4, .shadow6 {
+    animation: slideInFromRight 1s ease-out forwards;
+}
