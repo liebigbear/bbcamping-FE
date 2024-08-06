@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import '../styles/pages/Home.css';
 import Star from '../assets/icons/star.png';
 import Camping from '../assets/icons/camping.png';
@@ -23,11 +23,23 @@ function Home() {
     }
   };
 
+  const location = useLocation();
+  const { region, date } = location.state || { region: '', date: { month: null, day: null } };
+
   return (
     <div className="home">
       <div className="header">
         <Link to="/Date" className="back-button">&lt; 별별캠핑</Link>
-        <Link to="/Star" className="star-button">
+        <Link
+          to="/Star"
+          state={{
+            date: {
+              month: date.month,
+              day: date.day,
+            },
+          }}
+          className="star-button"
+        >
           <div className="star-container">
             <img src={Star} alt="Star icon" className="star-image" />
             <div>오늘 별자리</div>
