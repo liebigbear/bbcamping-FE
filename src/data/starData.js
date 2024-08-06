@@ -68,7 +68,7 @@ export const starData = [
     {
         "id": 7,
         "name": "전갈자리",
-        "eng": "Scorpio",
+        "eng": "Scorpion",
         "emoji": "🦂",
         "dateFrom": "10.23",
         "dateTo": "11.21",
