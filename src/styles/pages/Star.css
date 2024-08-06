@@ -1,0 +1,32 @@
+.weather-section{
+    width: 100%;
+    padding-top: 30px;
+}
+
+.meta-data{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.weather, .season{
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.emogi{
+    font-size: 25px;
+}
+
+.contents{
+    font-size: 15px;
+    color: white;
+}
