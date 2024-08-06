@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 import NotFound from "./pages/NotFound";
 import Splash from "./pages/Splash";
 import Home from "./pages/Home";
+import DetailedInfo from './pages/DetailedInfo';
 import './App.css'
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
             <Route path="/" element={<Splash />} />
             <Route path="*" element={<NotFound />} />
             <Route path="/Home" element={<Home />} />
+            <Route path="/:id" element={<DetailedInfo />} />
           </Routes>
         </div>
       </div>
